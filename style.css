@@ -1,6 +1,15 @@
+@font-face {
+    font-family: 'Norse Bold';
+    src: url('./fonts/Norse-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 :root {
-    --primary-bg-color: #FFF;
+    --primary-bg-color: #fbfafb;
     --secondary-bg-color: #000;
+    --primary-font-style: 'Roboto';
+    --secondary-font-style: 'Norse Bold';
 }
 
 * {
@@ -14,5 +23,47 @@ body {
     font-weight: 400;
     height: 100vh;
     display: flex;
+    background-color: var(--primary-bg-color);
+}
+
+.hero {
+    display: flex;
     flex-direction: column;
+    background-image: url('./images/plant-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 35%;
+    color: #fff;
+}
+
+.logo {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Norse Bold', sans-serif;
+    font-size: 70px;
+    margin-top: 40%;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.logo p {
+    margin-top: 20px;
+}
+
+.credits {
+    margin-top: auto;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.credits a, .credits p {
+    color: #d4d4d4; 
+}
+
+main {
+    flex: 1;
 }
