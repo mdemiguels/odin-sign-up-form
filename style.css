@@ -14,6 +14,7 @@
     --secondary-bg-color: #000;
     --input-border-color: #c0c0c0;
     --button-bg-color: #606c4c;
+    --form-text-color: #3b3b3b;
 }
 
 * {
@@ -106,6 +107,7 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
+    color: var(--form-text-color);
 }
 
 .input-item {
@@ -116,8 +118,8 @@ main {
 
 label {
     font-family: 'Quicksand', serif;
-    font-weight: bold;
     font-size: 14px;
+    font-weight: 500;
     color: var(--secondary-tc);
     letter-spacing: 2px;
 }
@@ -132,6 +134,7 @@ input {
 
 input:focus {
     box-shadow: 0px 5px 7px 0px rgba(199,199,199,1);
+    transition: box-shadow .2s ease-in;
 }
 
 .submit-container {
@@ -140,11 +143,19 @@ input:focus {
 }
 
 button {
+    cursor: pointer;
     padding: 13px 50px;
     background-color: var(--button-bg-color);
+    border: none;
     border-radius: 6px;
     color: white;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     margin-bottom: 30px;
+}
+
+.submit-container a {
+    color: var(--button-bg-color);
+    text-decoration: none;
+    font-weight: bold;
 }
